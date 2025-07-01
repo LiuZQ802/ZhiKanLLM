@@ -140,73 +140,73 @@ config = {
 
     1. 意图智能分析与解决方案生成。
 
-        ```json
-        //正确检索到场景
+        ```python
+        #正确检索到场景
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'insight'  //当前步骤：意图智能分析与解决方案生成
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'insight'  #当前步骤：意图智能分析与解决方案生成
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'insight',  //当前步骤：意图智能分析与解决方案生成
-         	'next_step':'SchemaScan',  //下一步：表模式与字段智能检索
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'insight',  #当前步骤：意图智能分析与解决方案生成
+         	'next_step':'SchemaScan',  #下一步：表模式与字段智能检索
         }
-        //中断--检索不到场景，返回此信息后无后续信息返回
+        #中断--检索不到场景，返回此信息后无后续信息返回
         {
-            'type': 'interrupt'//返回类型，中断，无后续阶段
+            'type': 'interrupt'#返回类型，中断，无后续阶段
         }
         ```
 
     2. 表模式与字段智能检索。
 
-        ```json
-        //正确返回
+        ```python
+        #正确返回
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'SchemaScan'  //当前步骤：表模式与字段智能检索
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'SchemaScan'  #当前步骤：表模式与字段智能检索
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'SchemaScan',  //当前步骤：表模式与字段智能检索
-         	'next_step':'SQLGen',  //下一步：SQL语句智能生成
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'SchemaScan',  #当前步骤：表模式与字段智能检索
+         	'next_step':'SQLGen',  #下一步：SQL语句智能生成
         }
         ```
 
     3. SQL语句智能生成
 
-        ```json
-        //正确返回
+        ```python
+        #正确返回
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'SQLGen'  //当前步骤：表模式与字段智能检索
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'SQLGen'  #当前步骤：表模式与字段智能检索
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'SQLGen',  //当前步骤：SQL语句智能生成
-         	'next_step':'end',  //下一步：到此结束，无后续阶段
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'SQLGen',  #当前步骤：SQL语句智能生成
+         	'next_step':'end',  #下一步：到此结束，无后续阶段
         }
         ```
 
     4. 结束符号
 
-        ```json
+        ```python
         {
-            'type': 'end' //返回类型：所有阶段返回结束，终止
+            'type': 'end' #返回类型：所有阶段返回结束，终止
         }
         ```
 
     5. 出错
 
-        ```json
+        ```python
         {
-            'type': 'error',//返回类型：出错
-            'content':'' //返回的内容:错误信息
+            'type': 'error',#返回类型：出错
+            'content':'' #返回的内容:错误信息
         }
         ```
 
@@ -238,73 +238,73 @@ config = {
 
     1. 意图智能分析与解决方案生成。
 
-        ```json
-        //正确检索到场景
+        ```python
+        #正确检索到场景
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'insight'  //当前步骤：意图智能分析与解决方案生成
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'insight'  #当前步骤：意图智能分析与解决方案生成
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'insight',  //当前步骤：意图智能分析与解决方案生成
-         	'next_step':'SchemaScan',  //下一步：表模式与字段智能检索
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'insight',  #当前步骤：意图智能分析与解决方案生成
+         	'next_step':'SchemaScan',  #下一步：表模式与字段智能检索
         }
-        //中断--检索不到场景，返回此信息后无后续信息返回
+        #中断--检索不到场景，返回此信息后无后续信息返回
         {
-            'type': 'interrupt'//返回类型，中断，无后续阶段
+            'type': 'interrupt'#返回类型，中断，无后续阶段
         }
         ```
 
     2. 表模式与字段智能检索。
 
-        ```json
-        //正确返回
+        ```python
+        #正确返回
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'SchemaScan'  //当前步骤：表模式与字段智能检索
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'SchemaScan'  #当前步骤：表模式与字段智能检索
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'SchemaScan',  //当前步骤：表模式与字段智能检索
-         	'next_step':'SQLGen',  //下一步：SQL语句智能生成
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'SchemaScan',  #当前步骤：表模式与字段智能检索
+         	'next_step':'SQLGen',  #下一步：SQL语句智能生成
         }
         ```
 
     3. SQL语句智能生成
 
-        ```json
-        //正确返回
+        ```python
+        #正确返回
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'SQLGen'  //当前步骤：表模式与字段智能检索
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'SQLGen'  #当前步骤：表模式与字段智能检索
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'SQLGen',  //当前步骤：SQL语句智能生成
-         	'next_step':'end',  //下一步：到此结束，无后续阶段
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'SQLGen',  #当前步骤：SQL语句智能生成
+         	'next_step':'end',  #下一步：到此结束，无后续阶段
         }
         ```
 
     4. 结束符号
 
-        ```sql
+        ```python
         {
-            'type': 'end' //返回类型：所有阶段返回结束，终止
+            'type': 'end' #返回类型：所有阶段返回结束，终止
         }
         ```
 
     5. 出错
 
-        ```sql
+        ```python
         {
-            'type': 'error',//返回类型：出错
-            'content':'' //返回的内容:错误信息
+            'type': 'error',#返回类型：出错
+            'content':'' #返回的内容:错误信息
         }
         ```
 
@@ -312,18 +312,18 @@ config = {
 
     1. 多轮次返回
 
-        ```json
-        //正确返回
+        ```python
+        #正确返回
         {
-            'type': 'result', //返回类型：正常返回结果
-            'content':'',//返回的内容
-            'current_step':'SQLGen'  //当前步骤：表模式与字段智能检索
+            'type': 'result', #返回类型：正常返回结果
+            'content':'',#返回的内容
+            'current_step':'SQLGen'  #当前步骤：表模式与字段智能检索
         }
-        //阶段结束
+        #阶段结束
         {
-            'type':'step_end',//返回类型：阶段结束
-         	'current_step':'SQLGen',  //当前步骤：SQL语句智能生成
-         	'next_step':'end',  //下一步：到此结束，无后续阶段
+            'type':'step_end',#返回类型：阶段结束
+         	'current_step':'SQLGen',  #当前步骤：SQL语句智能生成
+         	'next_step':'end',  #下一步：到此结束，无后续阶段
         }
         ```
     
@@ -331,16 +331,16 @@ config = {
     
         ```json
         {
-            'type': 'end' //返回类型：所有阶段返回结束，终止
+            'type': 'end' #返回类型：所有阶段返回结束，终止
         }
         ```
     
     3. 出错
     
-        ```json
+        ```python
         {
-            'type': 'error',//返回类型：出错
-            'content':'' //返回的内容:错误信息
+            'type': 'error',#返回类型：出错
+            'content':'' #返回的内容:错误信息
         }
         ```
 
@@ -366,27 +366,27 @@ config = {
 
     1. 返回表头
 
-        ```json
+        ```python
         {
-            'type': 'columns',//返回类型：表头
-            'columns':[] //返回的内容:数组格式，每一个值表示一个列名
+            'type': 'columns',#返回类型：表头
+            'columns':[] #返回的内容:数组格式，每一个值表示一个列名
         }
         ```
 
     2. 返回每一行数据，一次返回一行
 
-        ```json
+        ```python
         {
-            'type': 'row',//返回类型：一行数据
-            'columns':[] //返回的内容:数组格式，每一个值表示一列的值
+            'type': 'row',#返回类型：一行数据
+            'columns':[] #返回的内容:数组格式，每一个值表示一列的值
         }
         ```
 
     3. 结束符号
 
-        ```json
+        ```python
         {
-            'type': 'end' //返回类型：所有数据返回结束，终止
+            'type': 'end' #返回类型：所有数据返回结束，终止
         }
         ```
 
