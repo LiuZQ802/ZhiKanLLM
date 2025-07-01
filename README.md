@@ -17,7 +17,7 @@ python>=3.10
 ### 2、安装包
 
 ```python
-pip install zksql-0.1.0-py3-none-any.whl
+pip install https://github.com/LiuZQ802/ZhiKanLLM/releases/download/v0.0.1/zksql-0.1.0-py3-none-any.whl
 ```
 
 ### 3、使用示例
